@@ -48,7 +48,7 @@ async function seedBlogs(userPools, number =10){
 
 
 // seed comment
-async function seedComments(userPools, blogPools, number =10){
+async function seedComments(userPools, blogPools, number = 10) {
     // blogPools is array of user models
 
     const models = [];
