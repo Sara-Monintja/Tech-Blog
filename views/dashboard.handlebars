@@ -1,0 +1,22 @@
+<section>
+    {{#each blogs as |blog|}}
+    
+        <article>
+            <h2>{{blog.title}}</h2>
+
+            <p>{{blog.content}}</p>
+        </article>
+
+    {{/each}}
+</section>
+<form id="new-post-form" style="display: none;">
+
+    <label>Title</label>
+    <input id="title">
+    <label>Content</label>
+    <textarea id="content"></textarea>
+    <button>Save</button>
+    <button>Cancel</button>
+</form>
+<button id="create-post">New Post</button>
+<script src="./js/dashboard.js"></script>

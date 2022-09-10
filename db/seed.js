@@ -5,11 +5,18 @@ const Blog = require("../models/Blog");
 const Comment = require("../models/Comment");
 
 
-// seed user
 async function seedUsers(number = 10){
 
     const models = [];
 
+    const admin = await User.create({
+        email: 'test@test.com',
+        name: "testing",
+        password: "qwerty123"
+    });
+    models.push(admin);
+
+    // seed user
     for (let index = 0; index < number; index++) {
   
         const created = await User.create({
