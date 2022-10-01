@@ -25,12 +25,8 @@ To install the application:
 
 After cloning the code:
   - Open the code in VS Code
-  - Navigate to index.js
-  - Navigate to terminal by right clicking on Index.js file
-  - In terminal, install npm packages and also npm inquirer
-  - In terminal, type ' node index.js '
-  - Answer each questions
-  - Navigate to Output folder, where the Markdown file is generated
+  - Open integrated terminal 
+  - npm start 
 
 
 ## License 
