@@ -5,6 +5,10 @@
             <h2>{{blog.title}}</h2>
 
             <p>{{blog.content}}</p>
+            <p>
+            <span>Date: {{format_date blog.createdAt}}</span>
+            <span>User: {{blog.user.name}}</span>
+            </p>
         </article>
 
     {{/each}}

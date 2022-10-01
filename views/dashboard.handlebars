@@ -5,6 +5,10 @@
             <h2>{{blog.title}}</h2>
 
             <p>{{blog.content}}</p>
+            <p>
+            <span>Date: {{format_date blog.createdAt}}</span>
+            <span>User: {{blog.user.name}}</span>
+            </p>
         </article>
 
     {{/each}}
@@ -12,10 +16,10 @@
 <form id="new-post-form" style="display: none;">
 
     <label>Title</label>
-    <input id="title">
+    <input id="blog-title">
     <label>Content</label>
-    <textarea id="content"></textarea>
-    <button>Save</button>
+    <textarea id="blog-content"></textarea>
+    <button type="submit">Save</button>
     <button>Cancel</button>
 </form>
 <button id="create-post">New Post</button>

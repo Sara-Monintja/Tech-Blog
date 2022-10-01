@@ -7,16 +7,28 @@ createPostBtn.addEventListener('click', function() {
     createPostBtn.setAttribute('style', 'display: none;')
 });
 
-// if (title && content) {
-//     const response = await fetch(`/api/homeRoutes.js`, {
-//         method: 'POST',
-//         body: JSON.stringify({ title, content }),
-//         // TODO: ADD : headers: ???
-//     });
+const newBlog = async (event) => {
+    event.preventDefault();
+    const title = document.querySelector('#blog-title').value.trim();
+    const content = document.querySelector('#blog-content').value.trim();
 
-//     if(response.ok) {
-//         document.location.replace('/profile');
-//     } else {
-//         alert('Failed to save blog');
-//     }
-// };
+if (title && content) {
+    const response = await fetch(`/api/blogs`, {
+        method: 'POST',
+        body: JSON.stringify({ title, content }),
+        headers: {
+            'Content-Type': 'application/json',
+          },
+    });
+
+    if(response.ok) {
+        document.location.replace('/dashboard');
+    } else {
+        alert('Failed to save blog');
+    }
+};  
+}
+
+document
+  .querySelector('#new-post-form')
+  .addEventListener('submit', newBlog);
