@@ -26,7 +26,7 @@ To install the application:
 After cloning the code:
   - Open the code in VS Code
   - Open integrated terminal 
-  - npm start 
+  - node server.js
 
 
 ## License 
